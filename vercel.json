@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/admin", "destination": "https://pepin-place-darwon.vercel.app/admin", "permanent": false },
+    { "source": "/admin/:path*", "destination": "https://pepin-place-darwon.vercel.app/admin/:path*", "permanent": false },
+    { "source": "/login", "destination": "https://pepin-place-darwon.vercel.app/login", "permanent": false },
+    { "source": "/rezervacia", "destination": "https://pepin-place-darwon.vercel.app/rezervacia", "permanent": false }
+  ]
+}
