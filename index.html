@@ -1,410 +1,473 @@
-<!doctype html><html lang="sk"><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pepin Place · reštaurácia v Topoľčanoch</title>
+<meta name="description" content="Reštaurácia Pepin Place na Jána Bottu 7 v Topoľčanoch: obedové menu od stredy do piatku, lístok à la carte a kačacie jedlá. Neoficiálny návrh webu od Darwon.">
 <meta name="robots" content="noindex, nofollow">
-<title>Pepin Place · reštaurácia v Topoľčanoch — neoficiálny návrh</title>
-<meta name="description" content="Pepin Place, reštaurácia na Jána Bottu 7 v Topoľčanoch: obedové menu od stredy do piatku, lístok à la carte, jedlo na mieste, so sebou aj na rozvoz. Neoficiálny návrh webu od Darwon.">
-<meta name="theme-color" content="#14261F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/kacica-pre-dve-osoby.webp">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#F5F4F0;--paper-2:#ECEAE3;--ink:#17221D;--muted:#5A625D;--line:rgba(23,34,29,.16);
-  --green:#14261F;--on:#ECE9E0;--on-2:rgba(236,233,224,.7);--on-line:rgba(236,233,224,.18);
-  --gold:#B49A63;--gold-ink:#7A6536;
-  --serif:"Libre Bodoni",Georgia,"Times New Roman",serif;
-  --sans:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --wrap:1200px;--gut:40px;
+  --zel:#14261F;--zel-2:#1C3229;--zel-3:#0F1D18;
+  --sv:#EFEADF;--sv-2:rgba(239,234,223,.68);--ciara:rgba(239,234,223,.15);
+  --mos:#C9A45F;--mos-h:#B48E4A;--mos-text:#7A6130;
+  --plocha:#F2EEE5;--text-l:#14261F;--text-l2:#56605A;--ciara-l:rgba(20,38,31,.15);
+  --kontajner:1248px;--pad:24px;--medzera:24px;--rytmus:60px;
+  --f-n:"EB Garamond",Georgia,serif;--f-t:"Work Sans",system-ui,sans-serif;
+  --r-tl:10px;--r-k:20px;
+  --ovál:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'%3E%3Cellipse cx='100' cy='60' rx='97' ry='57' fill='none' stroke='%23C9A45F' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
 }
+@media (min-width:768px){:root{--pad:32px}}
+@media (min-width:1024px){:root{--rytmus:120px}}
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);font-feature-settings:"kern";-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;height:auto;display:block}
+html{scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--zel);color:var(--sv);font:400 15px/1.55 var(--f-t)}
+@media (min-width:768px){body{font-size:16px}}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0;padding:0}
-ul,ol{list-style:none}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
-.num{font-variant-numeric:tabular-nums lining-nums}
-.label{font:500 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.skip{position:absolute;left:-9999px}
-.skip:focus{left:16px;top:44px;background:var(--paper);padding:8px 12px;z-index:20}
+p,h1,h2,h3,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--f-n);font-weight:500;letter-spacing:-.02em;line-height:1.04}
+h2{font-size:34px}
+@media (min-width:1024px){h2{font-size:52px}}
+.cislo,.cena{font-variant-numeric:tabular-nums;white-space:nowrap}
+.akc{color:var(--mos)}
+.svetla .akc{color:var(--mos-text)}
+.kontajner{width:100%;max-width:var(--kontajner);margin-inline:auto}
+.sekcia{padding:var(--rytmus) var(--pad)}
+.mriezka{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--medzera)}
+.c12{grid-column:1/-1}
+.nad{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;font:500 13px/1 var(--f-t);letter-spacing:.12em;text-transform:uppercase;color:var(--mos)}
+.nad::before{content:"";width:20px;height:12px;flex:none;background:var(--ovál) 0 0/100% 100% no-repeat}
+.svetla .nad{color:var(--mos-text)}
+.perex{font-size:16px;color:var(--sv-2);max-width:520px}
+@media (min-width:768px){.perex{font-size:18px}}
+.svetla .perex{color:var(--text-l2)}
+.nowrap{white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* pruh */
-.notice{background:#0D1A15;color:var(--on-2);font-size:13px;line-height:1.45;padding:9px 0;text-align:left}
-.notice .wrap{display:block}
+/* tlačidlá */
+.tl{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 24px;border-radius:var(--r-tl);border:1px solid transparent;font:600 15px/1 var(--f-t);text-decoration:none;white-space:nowrap;transition:background-color .18s,border-color .18s,color .18s}
+.tl svg{width:20px;height:20px;flex:none}
+.tl--hl{background:var(--mos);color:var(--zel)}
+.tl--hl:hover{background:var(--mos-h)}
+.tl--obr{border-color:rgba(239,234,223,.35);color:var(--sv)}
+.tl--obr:hover{border-color:var(--sv)}
+.svetla .tl--obr{border-color:var(--ciara-l);color:var(--text-l)}
+.svetla .tl--obr:hover{border-color:var(--text-l)}
+@media (min-width:768px){.tl{height:52px}}
 
-/* header + hero */
-.dark{background:var(--green);color:var(--on)}
-.top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:24px;padding-bottom:24px;border-bottom:1px solid var(--on-line)}
-.brand{display:flex;align-items:center;gap:16px;text-decoration:none}
-.brand img{width:64px;height:auto}
-.brand span{font:500 11px/1.35 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--on-2);border-left:1px solid var(--on-line);padding-left:16px}
-.nav{display:flex;align-items:center;gap:32px;font-size:15px}
-.nav a:not(.btn){text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s;padding:6px 0}
-.nav a:not(.btn):hover{background-size:100% 1px}
-.nav .tel{color:var(--gold);font-weight:500}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:2px;font:600 15px/1 var(--sans);letter-spacing:.02em;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s}
-.btn-gold{background:var(--gold);color:#14261F;border:1px solid var(--gold)}
-.btn-gold:hover{background:#C6AE7A;border-color:#C6AE7A}
-.btn-line{border:1px solid var(--on-line);color:var(--on)}
-.btn-line:hover{border-color:var(--gold)}
-.btn-ink{background:var(--green);color:var(--on);border:1px solid var(--green)}
-.btn-ink:hover{background:#21392F}
+.pruh{background:var(--zel-3);color:var(--sv-2);font-size:12px;line-height:1.45;text-align:center;padding:8px var(--pad);border-bottom:1px solid var(--ciara)}
 
-.hero{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;min-height:min(600px,82vh);padding-top:72px;padding-bottom:72px;align-items:center}
-.hero-text{grid-column:1/8}
-.hero .label{color:var(--gold)}
-h1{font:400 clamp(56px,8.2vw,112px)/.98 var(--serif);letter-spacing:-.015em;margin:24px 0 16px}
-.sub{font:400 clamp(22px,2.2vw,28px)/1.3 var(--serif);color:var(--on);max-width:20em}
-.lead{color:var(--on-2);max-width:31em;margin-top:24px}
-.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid var(--on-line)}
-.facts div{padding:16px 24px 0 0}
-.facts div+div{padding-left:24px;border-left:1px solid var(--on-line)}
-.facts b{display:block;font:400 32px/1.1 var(--serif);color:var(--on)}
-.facts small{display:block;font-size:13px;line-height:1.45;color:var(--on-2);margin-top:6px}
-.hero-photo{grid-column:8/13;align-self:stretch;display:flex;flex-direction:column}
-.hero-photo img{width:100%;aspect-ratio:5/6;object-fit:cover;object-position:50% 40%}
-.hero-photo figcaption{font-size:13px;color:var(--on-2);margin-top:12px;display:flex;justify-content:space-between;gap:16px}
+/* hlavička */
+.hlavicka{position:sticky;top:0;z-index:30;background:var(--zel-3);padding-inline:var(--pad);border-bottom:1px solid var(--ciara);transition:box-shadow .2s}
+.hlavicka.je-dole{box-shadow:0 4px 32px rgba(0,0,0,.24)}
+.hlavicka__in{display:flex;align-items:center;gap:24px;height:64px}
+@media (min-width:1024px){.hlavicka__in{height:84px}}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:50px;height:auto}
+.logo span{font:500 11px/1.3 var(--f-t);letter-spacing:.16em;text-transform:uppercase;color:var(--sv-2);padding-left:12px;border-left:1px solid var(--ciara)}
+@media (min-width:1024px){.logo img{width:60px}}
+.menu{display:none;margin-left:auto;gap:32px}
+.menu a{font:500 15px/1 var(--f-t);text-decoration:none;padding:8px 0;border-bottom:1px solid transparent;transition:border-color .18s,color .18s}
+.menu a:hover{border-color:var(--mos);color:#fff}
+.hlavicka__tel{display:none;font:500 15px/1 var(--f-t);text-decoration:none;color:var(--mos)}
+.hlavicka .tl{margin-left:auto;height:40px;padding:0 16px;font-size:14px}
+.burger{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--ciara);border-radius:var(--r-tl);background:none;color:var(--sv);cursor:pointer;padding:0}
+.burger svg{width:22px;height:22px}
+@media (min-width:1024px){.menu,.hlavicka__tel{display:flex}.hlavicka .tl{margin-left:0;height:48px;padding:0 24px;font-size:15px}.burger{display:none}}
+.panel{position:fixed;inset:0;z-index:40;display:none}
+.panel.je-otvoreny{display:block}
+.panel__clona{position:absolute;inset:0;background:rgba(0,0,0,.3)}
+.panel__box{position:absolute;left:0;top:0;bottom:0;width:min(340px,88vw);background:var(--zel-3);padding:0 24px 24px;overflow:auto;border-right:1px solid var(--ciara)}
+.panel__hore{display:flex;align-items:center;justify-content:space-between;height:64px;margin-bottom:16px}
+.panel nav a{display:block;padding:14px 0;border-bottom:1px solid var(--ciara);font:600 28px/1.1 var(--f-n);text-decoration:none}
+.panel .tl{width:100%;margin-top:24px}
+.panel__info{margin-top:16px;font-size:14px;color:var(--sv-2)}
 
-/* sekcie */
-section{scroll-margin-top:16px}
-.sec{padding:120px 0}
-.head{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end;margin-bottom:56px}
-.head-l{grid-column:1/8}
-.head-r{grid-column:8/13;color:var(--muted);font-size:15px}
-.head .label{color:var(--gold-ink)}
-h2{font:400 clamp(40px,5vw,64px)/1.02 var(--serif);letter-spacing:-.01em;margin-top:16px}
-.rule{height:1px;background:var(--line);border:0;margin:0}
+/* hero */
+.hero{position:relative;z-index:2;padding:48px var(--pad) 0;overflow-x:clip}
+@media (min-width:1024px){.hero{padding-top:96px}}
+.hero__text{grid-column:1/-1;position:relative;z-index:2}
+.hero h1{font-size:46px;line-height:1}
+@media (min-width:768px){.hero h1{font-size:64px}}
+@media (min-width:1024px){.hero h1{font-size:76px}}
+.hero .perex{margin-top:24px}
+.akcie{display:flex;flex-direction:column;gap:8px;margin-top:32px}
+@media (min-width:600px){.akcie{flex-direction:row;flex-wrap:wrap;gap:12px}}
+.hodn{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:40px;padding-top:24px;border-top:1px solid var(--ciara)}
+.hodn__cislo{font:600 40px/1 var(--f-n);font-variant-numeric:tabular-nums}
+.hviezdy{display:flex;gap:3px;color:var(--mos)}
+.hviezdy svg{width:20px;height:20px}
+.hodn p{font-size:14px;color:var(--sv-2);flex-basis:100%}
+.hodn p b{color:var(--sv);font-weight:500}
+.hero__foto{grid-column:1/-1;position:relative;margin-top:48px;z-index:1}
+.hero__ovál{position:absolute;z-index:0;left:-18%;top:-9%;width:136%;aspect-ratio:200/120;background:var(--ovál) 0 0/100% 100% no-repeat;opacity:.7;pointer-events:none}
+.hero__foto picture{position:relative;z-index:1;display:block}
+.hero__foto img{width:100%;aspect-ratio:1080/1240;object-fit:cover;border-radius:var(--r-k)}
+.stitok{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:var(--r-tl);background:rgba(15,29,24,.88);color:var(--sv);font:500 13px/1.2 var(--f-t);white-space:nowrap}
+.stitok::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mos)}
+.st-1{left:44%;top:3%}.st-2{left:52%;top:33%}.st-3{left:4%;top:56%}
+@media (min-width:1024px){.st-3{top:70%}}
+.karta-ceny{position:relative;z-index:3;margin:-56px 0 -48px 16px;max-width:320px;padding:20px 24px;border-radius:var(--r-k);background:#fff;color:var(--text-l)}
+.karta-ceny b{display:block;font:600 26px/1.1 var(--f-n)}
+.karta-ceny small{display:block;margin-top:4px;font-size:13px;color:var(--text-l2)}
+.karta-ceny .cena{display:block;margin-top:12px;font:600 34px/1 var(--f-n);color:var(--mos-text)}
+@media (min-width:1024px){
+  .hero__text{grid-column:1/7;align-self:center}
+  .hero__foto{grid-column:8/13;margin-top:0;align-self:start}
+  .karta-ceny{position:absolute;left:-88px;bottom:-96px;margin:0;width:300px}
+  .stitok{font-size:14px}
+}
+/* hero končí, karta prečnieva do svetlej plochy */
+.hero__spod{height:0}
+@media (min-width:1024px){.hero__spod{height:40px}}
 
-/* obedové menu */
-.lunch{background:var(--paper)}
-.when{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px;margin-top:16px;font-size:15px;color:var(--muted)}
-.when strong{font:500 22px/1.2 var(--sans);color:var(--ink)}
-.days{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
-.day{padding:24px 24px 32px 0}
-.day+.day{padding-left:24px;border-left:1px solid var(--line)}
-.day h3{font:400 28px/1.15 var(--serif);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.day h3 span{font:500 13px/1 var(--sans);letter-spacing:.08em;color:var(--muted)}
-.soup{min-height:96px;margin:24px 0 8px;padding-bottom:16px;border-bottom:1px solid var(--line)}
-.k{font:500 11px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);display:block;margin-bottom:6px}
-.dish{display:grid;grid-template-columns:24px 1fr auto;column-gap:8px;padding:16px 0;border-bottom:1px solid var(--line)}
-.dish:last-child{border-bottom:0}
-.dish .n{font-weight:500;color:var(--gold-ink)}
-.dish .nm{font-weight:500;line-height:1.4}
-.dish .ds{grid-column:2/3;font-size:14px;line-height:1.5;color:var(--muted);margin-top:4px}
-.dish .pr{font-weight:600;white-space:nowrap;text-align:right}
-.dish.nn{grid-template-columns:1fr auto}
-.dish.nn .ds{grid-column:1/2}
-.daily{display:grid;grid-template-columns:200px 1fr 1fr;column-gap:24px;border-top:1px solid var(--ink);padding-top:8px}
-.daily>p{padding-top:16px}
-.daily .dish{border-bottom:0}
-.swap{display:flex;justify-content:space-between;gap:16px;margin-top:40px;padding:16px 24px;background:var(--paper-2);font-size:15px}
-.swap b{white-space:nowrap}
-.src{font-size:13px;color:var(--muted);margin-top:16px;max-width:60em}
+/* obedové menu (svetlá plocha) */
+.svetla{background:var(--plocha);color:var(--text-l);position:relative;overflow:hidden}
+.obed{padding-top:calc(var(--rytmus) + 24px)}
+@media (min-width:1024px){.obed{padding-top:calc(var(--rytmus) + 48px)}}
+.obed__ovál{display:none;position:absolute;left:-220px;top:-140px;width:640px;aspect-ratio:200/120;background:var(--ovál) 0 0/100% 100% no-repeat;opacity:.35;pointer-events:none}
+.hlava{display:grid;gap:16px;margin-bottom:32px;position:relative}
+@media (min-width:1024px){.obed__ovál{display:block}}
+@media (min-width:1024px){.hlava{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--medzera);margin-bottom:56px;align-items:end}.hlava__l{grid-column:1/8}.hlava__p{grid-column:9/13}}
+.ukazka{display:inline-block;margin-top:12px;padding:6px 10px;border-radius:var(--r-tl);background:rgba(20,38,31,.07);font:500 12px/1.3 var(--f-t);color:var(--text-l2)}
+.dni{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:24px}
+.den{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:14px 16px;border:1px solid var(--ciara-l);border-radius:var(--r-tl);background:#fff;color:var(--text-l);font:inherit;text-align:left;cursor:pointer;transition:border-color .18s,background-color .18s}
+.den b{font:600 24px/1 var(--f-n)}
+.den span{font-size:13px;color:var(--text-l2);font-variant-numeric:tabular-nums}
+.den:hover{border-color:var(--text-l)}
+.den[aria-selected="true"]{background:var(--zel);border-color:var(--zel);color:var(--sv)}
+.den[aria-selected="true"] span{color:var(--mos)}
+@media (min-width:1024px){
+  .obed__telo{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--medzera)}
+  .dni{grid-column:1/4;grid-template-columns:1fr;align-self:start;gap:12px;margin:0}
+  .den{padding:20px 24px}.den b{font-size:32px}
+  .listy{grid-column:5/13}
+}
+.list h3{font:500 12px/1 var(--f-t);letter-spacing:.12em;text-transform:uppercase;color:var(--text-l2);margin:0 0 4px}
+.list>div+div{margin-top:32px}
+.polozka{display:grid;grid-template-columns:28px 1fr auto;gap:2px 12px;padding:16px 0;border-bottom:1px solid var(--ciara-l)}
+.polozka__c{font:600 20px/1.2 var(--f-n);color:var(--mos-text)}
+.polozka__n{font:500 17px/1.35 var(--f-t)}
+.polozka__p{grid-column:2/3;font-size:14px;color:var(--text-l2)}
+.polozka .cena{grid-row:1;grid-column:3;font:600 17px/1.35 var(--f-t)}
+.polozka--bez{grid-template-columns:1fr auto}
+.polozka--bez .polozka__p{grid-column:1/2}
+.polozka--bez .cena{grid-column:2}
+.list .polozka:first-of-type{border-top:1px solid var(--text-l)}
+.pripl{display:grid;grid-template-columns:1fr auto;gap:12px;margin-top:24px;padding:16px 20px;border-radius:var(--r-tl);background:#fff;font-size:14px;color:var(--text-l2)}
+.pripl b{color:var(--text-l);font-weight:600}
+.obed__pata{display:flex;flex-direction:column;gap:12px;margin-top:40px}
+.obed__pata p{font-size:14px;color:var(--text-l2)}
+@media (min-width:768px){.obed__pata{flex-direction:row;align-items:center;gap:24px}}
+.js .panel-den[hidden]{display:none}
 
 /* à la carte */
-.carte{background:var(--paper-2)}
-.carte .swap{background:var(--paper)}
-.quote{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;margin-bottom:72px}
-.quote blockquote{grid-column:1/10;margin:0;font:400 clamp(24px,2.6vw,34px)/1.35 var(--serif);color:var(--ink)}
-.quote p{grid-column:1/10;margin-top:16px;font-size:14px;color:var(--muted)}
-.cols{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
-.col-a{grid-column:1/7}
-.col-b{grid-column:8/13}
-.col-a h3,.col-b h3{font:400 30px/1.15 var(--serif);padding-bottom:12px;border-bottom:2px solid var(--ink)}
-.col-a h3 small,.col-b h3 small{display:block;font:500 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);margin-top:10px}
-.grp{margin-top:24px}
-.grp .k{margin-bottom:0}
-.carte .dish .pr{color:var(--ink)}
-.carte .dish .w{font-size:13px;color:var(--muted);white-space:nowrap}
-.feat .nm{font:400 22px/1.3 var(--serif)}
-.feat .pr{font-size:19px}
+.karta{padding-bottom:calc(var(--rytmus)/2)}
+.citat{font:500 28px/1.2 var(--f-n);letter-spacing:-.01em;max-width:860px}
+@media (min-width:1024px){.citat{font-size:40px}}
+.citat-zdroj{margin-top:12px;font-size:13px;color:var(--sv-2)}
+.hody__hlava{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin:56px 0 24px}
+.hody__hlava h3{font-size:30px}
+.hody__hlava p{font-size:14px;color:var(--sv-2);margin-top:6px}
+.sipky{display:none;gap:8px}
+.sipky button{width:48px;height:48px;border-radius:50%;border:1px solid var(--ciara);background:none;color:var(--sv);cursor:pointer;display:grid;place-items:center;transition:border-color .18s}
+.sipky button:hover{border-color:var(--sv)}
+.sipky svg{width:20px;height:20px}
+@media (min-width:1024px){.sipky{display:flex}}
+.pas{--pl:var(--pad);display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad)*-1);padding:0 var(--pad) 8px var(--pl);scroll-padding-left:var(--pl);scrollbar-width:thin;scrollbar-color:var(--ciara) transparent}
+@media (min-width:1024px){.pas{--pl:max(var(--pad),calc((100% - var(--kontajner))/2 + var(--pad)));gap:var(--medzera)}}
+.jedlo{flex:0 0 280px;scroll-snap-align:start;display:flex;flex-direction:column;min-height:300px;padding:24px;border-radius:var(--r-k);background:var(--zel-2);position:relative;overflow:hidden}
+@media (min-width:1024px){.jedlo{flex-basis:300px;min-height:320px}}
+.jedlo__kat{font:500 12px/1 var(--f-t);letter-spacing:.12em;text-transform:uppercase;color:var(--sv-2)}
+.jedlo h4{margin:14px 0 10px;font:600 26px/1.08 var(--f-n);letter-spacing:-.01em}
+.jedlo p{font-size:14px;color:var(--sv-2)}
+.jedlo__spod{margin-top:auto;padding-top:20px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--ciara)}
+.jedlo__spod span{font-size:13px;color:var(--sv-2);font-variant-numeric:tabular-nums}
+.jedlo__spod .cena{font:600 28px/1 var(--f-n);color:var(--mos)}
+.jedlo--hl{background:var(--mos);color:var(--zel)}
+.jedlo--hl .jedlo__kat,.jedlo--hl p,.jedlo--hl .jedlo__spod span{color:rgba(20,38,31,.72)}
+.jedlo--hl .jedlo__spod{border-color:rgba(20,38,31,.2)}
+.jedlo--hl .jedlo__spod .cena{color:var(--zel)}
+.dalej{margin-top:72px;display:grid;gap:40px}
+.dalej h3{font-size:30px}
+.dalej .polozka{border-color:var(--ciara)}
+.dalej .polozka__p{color:var(--sv-2)}
+.dalej .polozka:first-of-type{border-top:1px solid var(--sv)}
+.dalej .skup h4{margin:0 0 4px;font:500 12px/1 var(--f-t);letter-spacing:.12em;text-transform:uppercase;color:var(--sv-2)}
+@media (min-width:1024px){.dalej{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--medzera)}.dalej__h{grid-column:1/5}.dalej .skup:nth-of-type(2){grid-column:5/9}.dalej .skup:nth-of-type(3){grid-column:9/13}}
+.karta__pozn{margin-top:32px;font-size:14px;color:var(--sv-2)}
 
 /* kontakt */
-.contact{padding:120px 0 0}
-.contact .head .label{color:var(--gold)}
-.contact .head-r{color:var(--on-2)}
-.cgrid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;border-top:1px solid var(--on-line)}
-.cinfo{grid-column:1/7;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
-.cinfo>div{padding:24px 0;border-bottom:1px solid var(--on-line)}
-.cinfo .wide{grid-column:1/3}
-.cinfo .k,.hours .k{color:var(--gold)}
-.cinfo p{color:var(--on)}
-.big{font:400 clamp(30px,3.2vw,40px)/1.15 var(--serif);text-decoration:none;display:inline-block}
-.cinfo a.ln{text-decoration:none;background:linear-gradient(var(--gold),var(--gold)) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:color .2s}
-.cinfo a.ln:hover{color:var(--gold)}
-.cbtns{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px}
-.hours{grid-column:8/13;padding-top:24px}
-.hours table{width:100%;border-collapse:collapse;margin-top:8px;font-size:16px}
-.hours td{padding:12px 0;border-bottom:1px solid var(--on-line)}
-.hours td+td{text-align:right}
-.hours tr.off td{color:var(--on-2)}
-.hours .note{font-size:13px;color:var(--on-2);margin-top:16px;line-height:1.5}
-.foot{margin-top:120px;border-top:1px solid var(--on-line);padding:24px 0 32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--on-2)}
+.kontakt{background:var(--zel-2)}
+.kontakt__foto{grid-column:1/-1;position:relative}
+.kontakt__foto img{width:100%;border-radius:var(--r-k)}
+.kontakt__text{grid-column:1/-1}
+.kontakt__hodiny{grid-column:1/-1}
+.kanaly{margin-top:32px;border-top:1px solid var(--sv)}
+.kanaly li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--ciara)}
+.kanaly span{font-size:14px;color:var(--sv-2)}
+.kanaly a{text-decoration:none;text-align:right;transition:color .18s}
+.kanaly a:hover{color:var(--mos)}
+.kanaly .velke{font:600 30px/1 var(--f-n);color:var(--mos);font-variant-numeric:tabular-nums}
+.hodiny{margin-top:40px}
+.hodiny h3{font:500 12px/1 var(--f-t);letter-spacing:.12em;text-transform:uppercase;color:var(--sv-2);margin-bottom:12px}
+.hodiny li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--ciara);font-variant-numeric:tabular-nums}
+.hodiny li.zatv{color:var(--sv-2)}
+.hodiny p{margin-top:12px;font-size:13px;color:var(--sv-2)}
+.kontakt .akcie{margin-top:32px}
+@media (min-width:1024px){.kontakt__foto{grid-column:1/7;align-self:start}.kontakt__text{grid-column:8/13;grid-row:1/3}.kontakt__hodiny{grid-column:1/7}}
+
+/* pätička */
+.paticka{position:relative;overflow:hidden;padding:72px var(--pad) 112px}
+@media (min-width:1024px){.paticka{padding-bottom:72px}}
+.paticka__ovál{position:absolute;right:-300px;bottom:-300px;width:640px;aspect-ratio:200/120;background:var(--ovál) 0 0/100% 100% no-repeat;opacity:.3;pointer-events:none}
+.paticka__in{position:relative;display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center;justify-content:space-between}
+.paticka img{width:72px}
+.paticka p{font-size:14px;color:var(--sv-2)}
+.paticka nav{display:flex;gap:24px;font-size:14px}
+.paticka nav a{text-decoration:none;color:var(--sv-2)}
+.paticka nav a:hover{color:var(--sv)}
 
 /* mobilná lišta */
-.mbar{display:none}
-
-@media (max-width:1040px){
-  .nav .hide-md{display:none}
-  .hero-text{grid-column:1/8}
-  .hero-photo{grid-column:8/13}
-  .facts{grid-template-columns:1fr 1fr}
-  .facts div:nth-child(3){display:none}
-}
-@media (max-width:860px){
-  :root{--gut:24px}
-  .hero{grid-template-columns:1fr;padding-top:48px;padding-bottom:56px;min-height:0}
-  .hero-text,.hero-photo{grid-column:1/-1}
-  .hero-photo{margin-top:48px}
-  .facts{grid-template-columns:repeat(3,1fr)}
-  .facts div:nth-child(3){display:block}
-  .head,.quote,.cols,.cgrid{grid-template-columns:1fr}
-  .head-l,.head-r,.quote blockquote,.quote p,.col-a,.col-b,.cinfo,.hours{grid-column:1/-1}
-  .head-r{margin-top:16px}
-  .col-b{margin-top:72px}
-  .days{grid-template-columns:1fr}
-  .soup{min-height:0}
-  .day,.day+.day{padding:24px 0 16px;border-left:0}
-  .day+.day{border-top:1px solid var(--ink)}
-  .daily{grid-template-columns:1fr}
-  .sec{padding:72px 0}
-  .contact{padding-top:72px}
-  .hours{padding-top:40px}
-  .foot{margin-top:72px}
-}
-@media (max-width:640px){
-  :root{--gut:16px}
-  body{font-size:16px}
-  .contact{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
-  .notice{font-size:12px}
-  .nav a:not(.tel){display:none}
-  .nav .tel.hide-md{display:inline-block;padding:12px 0}
-  .nav .btn{display:none}
-  .brand img{width:56px}
-  .brand span{display:none}
-  .facts{grid-template-columns:1fr 1fr}
-  .facts div:nth-child(3){display:none}
-  .facts div{padding-right:16px}
-  .facts div+div{padding-left:16px}
-  .facts b{font-size:28px}
-  .cinfo{grid-template-columns:1fr}
-  .cinfo .wide{grid-column:1/-1}
-  .swap{flex-direction:column;gap:4px;padding:16px}
-  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--green);padding:8px 16px calc(8px + env(safe-area-inset-bottom));border-top:1px solid var(--on-line);box-shadow:0 -4px 16px rgba(0,0,0,.12)}
-  .mbar .btn{min-height:48px;padding:0 12px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.lista{position:fixed;left:0;right:0;bottom:0;z-index:35;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--zel-3);border-top:1px solid var(--ciara);box-shadow:0 -4px 32px rgba(0,0,0,.24)}
+.lista a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:var(--r-tl);border:1px solid var(--ciara);text-decoration:none;font:600 14px/1 var(--f-t)}
+.lista a:first-child{background:var(--mos);border-color:var(--mos);color:var(--zel)}
+.lista svg{width:18px;height:18px}
+@media (min-width:1024px){.lista{display:none}}
 </style>
+</head>
+<body>
+<p class="pruh">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od Darwon, objednávky ani rezervácie tu nefungujú</p>
 
-<a class="skip" href="#obsah">Preskočiť na obsah</a>
-<div class="notice"><div class="wrap">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od Darwon, objednávky ani rezervácie tu nefungujú</div></div>
-
-<header class="dark">
-  <div class="wrap top">
-    <a class="brand" href="#" aria-label="Pepin Place — úvod"><img src="assets/pepin-logo-svetle.webp" width="284" height="200" alt="Logo Pepin"><span>Place<br>Topoľčany</span></a>
-    <nav class="nav" aria-label="Hlavná navigácia">
-      <a href="#obedove-menu">Obedové menu</a>
-      <a href="#listok">Lístok</a>
-      <a href="#kontakt">Kontakt</a>
-      <a class="tel num hide-md" href="tel:+421949000190">0949 000 190</a>
-      <a class="btn btn-gold" href="tel:+421949000190">Zavolať</a>
-    </nav>
+<header class="hlavicka" id="hlavicka">
+  <div class="kontajner hlavicka__in">
+    <a class="logo" href="#" aria-label="Pepin Place, na začiatok stránky"><img src="assets/pepin-logo.webp" width="284" height="200" alt="Logo Pepin"><span>Place<br>Topoľčany</span></a>
+    <nav class="menu" aria-label="Hlavná navigácia"><a href="#obed">Obedové menu</a><a href="#listok">Lístok</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="hlavicka__tel cislo" href="tel:+421949000190">0949 000 190</a>
+    <a class="tl tl--hl" href="tel:+421949000190">Zavolať</a>
+    <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="panel" aria-label="Otvoriť menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
   </div>
 </header>
 
-<main id="obsah">
-<section class="dark" aria-labelledby="h1">
-  <div class="wrap hero">
-    <div class="hero-text">
-      <p class="label">Reštaurácia · Jána Bottu 7 · Topoľčany</p>
-      <h1 id="h1">Pepin Place</h1>
-      <p class="sub">Reštaurácia v Topoľčanoch — obedové menu a lístok à la carte.</p>
-      <p class="lead">Obedové menu od stredy do piatku, k tomu lístok à la carte a sezónne kačacie jedlá. Jedlo na mieste, so sebou aj na rozvoz. Stôl si dohodnete telefonicky.</p>
-      <div class="cta">
-        <a class="btn btn-gold" href="tel:+421949000190">Zavolať · <span class="num">&nbsp;0949 000 190</span></a>
-        <a class="btn btn-line" href="https://www.google.com/maps/search/Pepin+Place+Topo%C4%BE%C4%8Dany" target="_blank" rel="noopener">Zistiť cestu</a>
+<div class="panel" id="panel" aria-hidden="true">
+  <div class="panel__clona" data-zavriet></div>
+  <div class="panel__box">
+    <div class="panel__hore"><img src="assets/pepin-logo.webp" width="284" height="200" alt="Logo Pepin" style="width:50px"><button class="burger" type="button" data-zavriet aria-label="Zavrieť menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <nav aria-label="Menu"><a href="#obed" data-zavriet>Obedové menu</a><a href="#listok" data-zavriet>Lístok à la carte</a><a href="#kontakt" data-zavriet>Kontakt a hodiny</a></nav>
+    <a class="tl tl--hl" href="tel:+421949000190">Zavolať · 0949 000 190</a>
+    <p class="panel__info">Jána Bottu 7, 955 01 Topoľčany</p>
+  </div>
+</div>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="kontajner mriezka">
+    <div class="hero__text">
+      <p class="nad">Jána Bottu 7 · Topoľčany</p>
+      <h1 id="h1">Reštaurácia<br> <span class="akc">Pepin Place</span><br> v Topoľčanoch</h1>
+      <p class="perex">Obedové menu od stredy do piatku, lístok à la carte a sezónne kačacie jedlá. Na mieste, so sebou aj rozvoz. Stôl si dohodnete telefonicky.</p>
+      <div class="akcie">
+        <a class="tl tl--hl" href="tel:+421949000190"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Zavolať · <span class="cislo">0949 000 190</span></a>
+        <a class="tl tl--obr" href="#obed">Obedové menu</a>
       </div>
-      <div class="facts">
-        <div><b class="num">4,9 / 5</b><small>Google · 298 hodnotení</small></div>
-        <div><b class="num">92 %</b><small>odporúča na Facebooku · 9 hodnotení</small></div>
-        <div><b class="num">11–14 h</b><small>obedové menu, streda až piatok</small></div>
+      <div class="hodn">
+        <span class="hodn__cislo">4,9</span>
+        <span class="hviezdy" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span>
+        <p><b class="cislo">4,9 / 5 · 298 hodnotení na Google</b> · 92 % odporúča na Facebooku (9)</p>
       </div>
     </div>
-    <figure class="hero-photo">
-      <img src="assets/kacica-pre-dve-osoby.webp" width="960" height="1154" fetchpriority="high" alt="Pečená kačica na červenej kapuste s lokšami a parenou knedľou na drevenom stole s logom Pepin">
-      <figcaption><span>Kačica pre dve osoby</span><span>foto: Pepin, Facebook</span></figcaption>
+    <figure class="hero__foto" style="margin-inline:0;margin-bottom:0">
+      <span class="hero__ovál" aria-hidden="true"></span>
+      <picture><img src="assets/kacica-pre-dve-osoby.webp" srcset="assets/kacica-pre-dve-osoby-720.webp 720w, assets/kacica-pre-dve-osoby.webp 1080w" sizes="(min-width:1024px) 500px, 100vw" width="1080" height="1240" alt="Kačica pre dve osoby na oválnom tanieri s červenou kapustou, lokšami a foie gras, vedľa parená knedľa" fetchpriority="high"></picture>
+      <span class="stitok st-1">parená knedľa</span>
+      <span class="stitok st-2">lokše a foie gras</span>
+      <span class="stitok st-3">karamelizovaná červená kapusta</span>
+      <figcaption class="karta-ceny"><b>Kačica pre 2 osoby</b><small>z lístka Kačacie hody, október 2026 · <span class="nowrap">1000 g</span></small><span class="cena">34,90 €</span></figcaption>
     </figure>
   </div>
+  <div class="hero__spod"></div>
 </section>
 
-<section class="sec lunch" id="obedove-menu" aria-labelledby="h-lunch">
-  <div class="wrap">
-    <div class="head">
-      <div class="head-l">
-        <p class="label">Streda až piatok</p>
-        <h2 id="h-lunch">Obedové menu</h2>
-        <p class="when"><strong class="num">11:00 – 14:00</strong><span>polievka a hlavné jedlo, každý týždeň nové</span></p>
+<section class="sekcia svetla obed" id="obed" aria-labelledby="h-obed">
+  <span class="obed__ovál" aria-hidden="true"></span>
+  <div class="kontajner">
+    <div class="hlava">
+      <div class="hlava__l">
+        <p class="nad">Obedové menu · streda až piatok</p>
+        <h2 id="h-obed">Obed od stredy <span class="akc">do piatku</span></h2>
       </div>
-      <p class="head-r">Ukážka návrhu: menu týždňa 7.–9. 10. 2026 prepísané z ich Facebooku. Na webe by bolo každý týždeň v čitateľnom texte namiesto obrázka.</p>
-    </div>
-
-    <div class="days">
-      <article class="day">
-        <h3>Streda <span class="num">7. 10.</span></h3>
-        <div class="soup"><span class="k">Polievka · 0,25&nbsp;l</span>Gulášová, kváskový chlieb</div>
-        <ol>
-          <li class="dish"><span class="n">1.</span><span class="nm">Perkelt z kuracích stehien</span><span class="pr num">9,50 €</span><span class="ds">maslové halušky, petržlenová vňať, kyslá smotana · 300&nbsp;g</span></li>
-          <li class="dish"><span class="n">2.</span><span class="nm">Gazdovský koláč z hovädzím ragú</span><span class="pr num">9,90 €</span><span class="ds">zapečené zemiakové pyré so syrom, miešaný šalát · 300&nbsp;g</span></li>
-        </ol>
-      </article>
-      <article class="day">
-        <h3>Štvrtok <span class="num">8. 10.</span></h3>
-        <div class="soup"><span class="k">Polievka · 0,25&nbsp;l</span>Čínska ostrokyslá s kuracím mäsom</div>
-        <ol>
-          <li class="dish"><span class="n">1.</span><span class="nm">Thai udon rezance</span><span class="pr num">9,90 €</span><span class="ds">wok zelenina, teriyaki omáčka, kuracie mäso, sezam · 300&nbsp;g</span></li>
-          <li class="dish"><span class="n">2.</span><span class="nm">Hovädzie azu v zemiakovej placke</span><span class="pr num">10,90 €</span><span class="ds">írsky cheddar cheese, čalamáda · 300&nbsp;g</span></li>
-        </ol>
-      </article>
-      <article class="day">
-        <h3>Piatok <span class="num">9. 10.</span></h3>
-        <div class="soup"><span class="k">Polievka · 0,25&nbsp;l</span>Krém z červenej šošovice, kokosové mlieko</div>
-        <ol>
-          <li class="dish"><span class="n">1.</span><span class="nm">Thai chicken curry</span><span class="pr num">9,50 €</span><span class="ds">julienne zelenina, jazmínová ryža, sezam · 300&nbsp;g</span></li>
-          <li class="dish"><span class="n">2.</span><span class="nm">Pulled pork, hranolky</span><span class="pr num">10,50 €</span><span class="ds">trhaná bravčová krkovička, omáčka z írskeho syru cheddar, tajná omáčka, drvená slanina, naša BBQ omáčka · 300&nbsp;g</span></li>
-        </ol>
-      </article>
-    </div>
-
-    <div class="daily">
-      <p class="k">Každý deň<br>streda – piatok</p>
-      <div class="dish"><span class="n">3.</span><span class="nm">Syr v žemli, hranolky, domáca tatárska omáčka</span><span class="pr num">11,50 €</span><span class="ds">fritovaný švajčiarsky syr ementál, brioche žemľa, coleslaw šalát, rajčina, kyslá uhorka · 350&nbsp;g</span></div>
-      <div class="dish"><span class="n">4.</span><span class="nm">Tataki z tuniaka žltoplutvého</span><span class="pr num">19,90 €</span><span class="ds">teriyaki omáčka, wasabi, jazmínová ryža, micro greens, sezam · 350&nbsp;g</span></div>
-    </div>
-
-    <p class="swap"><span>Zmena polievky na silný kačací vývar — koreňová zelenina, rezance, čerstvá vňať</span><b class="num">+ 1,50 €</b></p>
-    <p class="src">Čas výdaja obedov podľa Google (9. 10. 2026) — overiť.</p>
-  </div>
-</section>
-
-<section class="sec carte" id="listok" aria-labelledby="h-carte">
-  <div class="wrap">
-    <div class="head">
-      <div class="head-l">
-        <p class="label">Jesenný výber · október 2026</p>
-        <h2 id="h-carte">Lístok à la carte</h2>
-      </div>
-      <p class="head-r">Výber z lístka à la carte, ktorý zverejnili na Facebooku v októbri 2026. Úplný lístok a aktuálne ceny v reštaurácii.</p>
-    </div>
-
-    <div class="quote">
-      <blockquote>„Kačica pre dve osoby. So všetkým čo k tomu patrí – karamelizovaná červená kapusta, mastené lokše, naša domáca parená knedľa, foie gras!“</blockquote>
-      <p>Pepin na Facebooku, 9. 10. 2026</p>
-    </div>
-
-    <div class="cols">
-      <div class="col-a">
-        <h3>Kačacie hody<small>Sezónna ponuka · <span class="num">7. – 17. 10. 2026</span></small></h3>
-        <p class="src">„Jesenné kačacie jedlá špeciálne pripravené v našom à la carte.“</p>
-        <div class="grp">
-          <span class="k">Hlavné jedlo</span>
-          <ul>
-            <li class="dish nn feat"><span class="nm">Kačica pre 2 osoby</span><span class="pr num">34,90 €</span><span class="ds">½ pečenej kačice, karamelizovaná červená kapusta, mastené lokše, naša parená knedľa, foie gras (vykŕmená kačacia pečeň) · 1000&nbsp;g</span></li>
-            <li class="dish nn"><span class="nm">Konfitované kačacie stehno</span><span class="pr num">16,90 €</span><span class="ds">karamelizovaná červená kapusta, mastené lokše · 350&nbsp;g</span></li>
-            <li class="dish nn"><span class="nm">Naše domáce pirohy plnené konfitovaným kačacím mäsom</span><span class="pr num">18,90 €</span><span class="ds">pyré z červenej kapusty, pomarančový gél, bylinkový olej · 350&nbsp;g</span></li>
-            <li class="dish nn"><span class="nm">Sous vide kačacie prsia</span><span class="pr num">19,90 €</span><span class="ds">pšeničné wok rezance, sezónna zelenina, koriander · 350&nbsp;g</span></li>
-          </ul>
-        </div>
-        <div class="grp">
-          <span class="k">Predjedlo a polievka</span>
-          <ul>
-            <li class="dish nn"><span class="nm">Foie gras (vykŕmená kačacia pečeň)</span><span class="pr num">11,90 €</span><span class="ds">figové chutney, brioška · 120&nbsp;g</span></li>
-            <li class="dish nn"><span class="nm">Silný vývar z pečenej kačice</span><span class="pr num">4,90 €</span><span class="ds">julienne zelenina, kačacie knedlíky, ligurček · 0,25&nbsp;l</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-b">
-        <h3>Ďalej na lístku<small>À la carte · október 2026</small></h3>
-        <div class="grp">
-          <span class="k">Predjedlo a polievka</span>
-          <ul>
-            <li class="dish nn"><span class="nm">Carpaccio z pečenej repy</span><span class="pr num">7,90 €</span><span class="ds">kozí syr, orechy, bazalkový olej · 150&nbsp;g</span></li>
-            <li class="dish nn"><span class="nm">Zemiakový krém z hokkaido tekvice</span><span class="pr num">5,50 €</span><span class="ds">gaštany, tekvicový olej · 0,25&nbsp;l</span></li>
-          </ul>
-        </div>
-        <div class="grp">
-          <span class="k">Hlavné jedlo</span>
-          <ul>
-            <li class="dish nn"><span class="nm">Steak z hovädzej sviečkovice</span><span class="pr num">32,90 €</span><span class="ds">foie gras, baby špenát, zemiakové pyré, demi-glace omáčka · 180/150&nbsp;g</span></li>
-            <li class="dish nn"><span class="nm">Grilované kuracie prsia</span><span class="pr num">16,50 €</span><span class="ds">gaštany, slanina, zemiaková štrúdľa, velouté omáčka · 350&nbsp;g</span></li>
-            <li class="dish nn"><span class="nm">Fritovaný rezeň z bravčovej panenky</span><span class="pr num">14,90 €</span><span class="ds">zemiakové pyré alebo ryža, miešaný šalát · 350&nbsp;g</span></li>
-          </ul>
-        </div>
-        <p class="swap"><span>Stôl si dohodnete telefonicky.</span><a class="ln num" href="tel:+421949000190"><b>0949 000 190</b></a></p>
+      <div class="hlava__p">
+        <p class="perex">Obedy od 11:00 do 14:00: polievka, dve jedlá dňa a dve jedlá, ktoré sú v menu každý deň.</p>
+        <span class="ukazka">Ukážka návrhu: menu 7.–9. 10. 2026 z ich Facebooku</span>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="dark contact" id="kontakt" aria-labelledby="h-contact">
-  <div class="wrap">
-    <div class="head">
-      <div class="head-l">
-        <p class="label">Kontakt</p>
-        <h2 id="h-contact">Jána Bottu 7, Topoľčany</h2>
+    <div class="obed__telo">
+      <div class="dni" role="tablist" aria-label="Deň obedového menu">
+        <button class="den" type="button" role="tab" id="t-st" aria-controls="p-st" aria-selected="true"><b>Streda</b><span>7. 10.</span></button>
+        <button class="den" type="button" role="tab" id="t-st2" aria-controls="p-stv" aria-selected="false"><b>Štvrtok</b><span>8. 10.</span></button>
+        <button class="den" type="button" role="tab" id="t-pi" aria-controls="p-pi" aria-selected="false"><b>Piatok</b><span>9. 10.</span></button>
       </div>
-      <p class="head-r">Jedlo na mieste, so sebou aj na rozvoz. Stôl si dohodnete telefonicky.</p>
-    </div>
-    <div class="cgrid">
-      <div class="cinfo">
-        <div class="wide">
-          <span class="k">Telefón</span>
-          <a class="big num" href="tel:+421949000190">0949 000 190</a>
-          <div class="cbtns">
-            <a class="btn btn-gold" href="tel:+421949000190">Zavolať</a>
-            <a class="btn btn-line" href="mailto:pepin.place@gmail.com">Napísať e-mail</a>
+      <div class="listy">
+        <div class="list panel-den" id="p-st" role="tabpanel" aria-labelledby="t-st">
+          <div><h3>Polievka · 0,25 l</h3><p class="polozka polozka--bez"><span class="polozka__n">Gulášová, kváskový chlieb</span></p></div>
+          <div><h3>Hlavné jedlo</h3>
+            <p class="polozka"><span class="polozka__c">1</span><span class="polozka__n">Perkelt z kuracích stehien</span><span class="cena">9,50 €</span><span class="polozka__p">maslové halušky, petržlenová vňať, kyslá smotana · <span class="nowrap">300 g</span></span></p>
+            <p class="polozka"><span class="polozka__c">2</span><span class="polozka__n">Gazdovský koláč z hovädzím ragú</span><span class="cena">9,90 €</span><span class="polozka__p">zapečené zemiakové pyré so syrom, miešaný šalát · <span class="nowrap">300 g</span></span></p>
           </div>
         </div>
-        <div>
-          <span class="k">Adresa</span>
-          <p>Jána Bottu 7<br><span class="num">955 01</span> Topoľčany</p>
-          <p style="margin-top:8px"><a class="ln" href="https://www.google.com/maps/search/Pepin+Place+Topo%C4%BE%C4%8Dany" target="_blank" rel="noopener">Zistiť cestu v Mapách Google</a></p>
+        <div class="list panel-den" id="p-stv" role="tabpanel" aria-labelledby="t-st2">
+          <div><h3>Polievka · 0,25 l</h3><p class="polozka polozka--bez"><span class="polozka__n">Čínska ostrokyslá s kuracím mäsom</span></p></div>
+          <div><h3>Hlavné jedlo</h3>
+            <p class="polozka"><span class="polozka__c">1</span><span class="polozka__n">Thai udon rezance</span><span class="cena">9,90 €</span><span class="polozka__p">wok zelenina, teriyaki omáčka, kuracie mäso, sezam · <span class="nowrap">300 g</span></span></p>
+            <p class="polozka"><span class="polozka__c">2</span><span class="polozka__n">Hovädzie azu v zemiakovej placke</span><span class="cena">10,90 €</span><span class="polozka__p">írsky cheddar cheese, čalamáda · <span class="nowrap">300 g</span></span></p>
+          </div>
         </div>
-        <div>
-          <span class="k">E-mail a siete</span>
-          <p><a class="ln" href="mailto:pepin.place@gmail.com">pepin.place@gmail.com</a></p>
-          <p style="margin-top:8px"><a class="ln" href="https://www.instagram.com/pepin.place/" target="_blank" rel="noopener">Instagram @pepin.place</a></p>
-          <p style="margin-top:8px"><a class="ln" href="https://www.facebook.com/profile.php?id=100094044356500" target="_blank" rel="noopener">Navštíviť Facebook</a></p>
+        <div class="list panel-den" id="p-pi" role="tabpanel" aria-labelledby="t-pi">
+          <div><h3>Polievka · 0,25 l</h3><p class="polozka polozka--bez"><span class="polozka__n">Krém z červenej šošovice, kokosové mlieko</span></p></div>
+          <div><h3>Hlavné jedlo</h3>
+            <p class="polozka"><span class="polozka__c">1</span><span class="polozka__n">Thai chicken curry</span><span class="cena">9,50 €</span><span class="polozka__p">julienne zelenina, jazmínová ryža, sezam · <span class="nowrap">300 g</span></span></p>
+            <p class="polozka"><span class="polozka__c">2</span><span class="polozka__n">Pulled pork, hranolky</span><span class="cena">10,50 €</span><span class="polozka__p">trhaná bravčová krkovička, omáčka z írskeho syru cheddar, tajná omáčka, drvená slanina, naša BBQ omáčka · <span class="nowrap">300 g</span></span></p>
+          </div>
         </div>
-      </div>
-      <div class="hours">
-        <span class="k">Otváracie hodiny</span>
-        <table class="num">
-          <tr class="off"><td>Pondelok</td><td>zatvorené</td></tr>
-          <tr class="off"><td>Utorok</td><td>zatvorené</td></tr>
-          <tr><td>Streda</td><td>11:00 – 21:00</td></tr>
-          <tr><td>Štvrtok</td><td>11:00 – 21:00</td></tr>
-          <tr><td>Piatok</td><td>11:00 – 22:00</td></tr>
-          <tr><td>Sobota</td><td>12:00 – 22:00</td></tr>
-          <tr class="off"><td>Nedeľa</td><td>zatvorené</td></tr>
-        </table>
-        <p class="note">Obedové menu streda až piatok 11:00 – 14:00. Hodiny podľa Google k 9. 10. 2026 — overiť, Google ukazuje aj iné varianty.</p>
+        <div class="list" style="margin-top:32px">
+          <div><h3>Každý deň, streda až piatok</h3>
+            <p class="polozka"><span class="polozka__c">3</span><span class="polozka__n">Syr v žemli, hranolky, domáca tatárska omáčka</span><span class="cena">11,50 €</span><span class="polozka__p">fritovaný švajčiarsky syr ementál, brioche žemľa, coleslaw šalát, rajčina, kyslá uhorka · <span class="nowrap">350 g</span></span></p>
+            <p class="polozka"><span class="polozka__c">4</span><span class="polozka__n">Tataki z tuniaka žltoplutvého</span><span class="cena">19,90 €</span><span class="polozka__p">teriyaki omáčka, wasabi, jazmínová ryža, micro greens, sezam · <span class="nowrap">350 g</span></span></p>
+          </div>
+        </div>
+        <p class="pripl"><span>Zmena polievky na <b>silný kačací vývar</b> · koreňová zelenina, rezance, čerstvá vňať</span><b class="cena">+ 1,50 €</b></p>
       </div>
     </div>
-    <footer class="foot">
-      <span>Neoficiálny návrh webu · Darwon · 2026</span>
-      <span>Pepin Place · Jána Bottu 7, Topoľčany</span>
-    </footer>
+    <div class="obed__pata">
+      <a class="tl tl--hl" href="tel:+421949000190">Zavolať · <span class="cislo">0949 000 190</span></a>
+      <p>Obedy od stredy do piatku, 11:00–14:00.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sekcia karta" id="listok" aria-labelledby="h-listok">
+  <div class="kontajner">
+    <div class="hlava">
+      <div class="hlava__l">
+        <p class="nad">Lístok à la carte · október 2026</p>
+        <h2 id="h-listok">Kačacie hody <span class="akc cislo">7.–17. 10.</span></h2>
+      </div>
+      <div class="hlava__p"><p class="perex">„Jesenné kačacie jedlá špeciálne pripravené v našom à la carte.“ Ukážka sezónnej ponuky, ako ju zverejnili na Facebooku.</p></div>
+    </div>
+    <blockquote style="margin:0">
+      <p class="citat">„Kačica pre dve osoby. So všetkým čo k tomu patrí – karamelizovaná červená kapusta, mastené lokše, naša domáca parená knedľa, <span class="akc">foie gras!</span>“</p>
+      <p class="citat-zdroj">Pepin na Facebooku, 9. 10. 2026</p>
+    </blockquote>
+    <div class="hody__hlava">
+      <div><h3>Z kačacieho lístka</h3><p>6 jedál · ceny podľa lístka z októbra 2026</p></div>
+      <div class="sipky"><button type="button" data-posun="-1" aria-label="Posunúť doľava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" data-posun="1" aria-label="Posunúť doprava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+  </div>
+  <ul class="pas" id="pas" aria-label="Kačacie jedlá">
+    <li class="jedlo jedlo--hl"><span class="jedlo__kat">Hlavné jedlo · pre 2 osoby</span><h4>Kačica pre 2 osoby</h4><p>½ pečenej kačice, karamelizovaná červená kapusta, mastené lokše, naša parená knedľa, foie gras (vykŕmená kačacia pečeň)</p><div class="jedlo__spod"><span>1000 g</span><span class="cena">34,90 €</span></div></li>
+    <li class="jedlo"><span class="jedlo__kat">Hlavné jedlo</span><h4>Konfitované kačacie stehno</h4><p>karamelizovaná červená kapusta, mastené lokše</p><div class="jedlo__spod"><span>350 g</span><span class="cena">16,90 €</span></div></li>
+    <li class="jedlo"><span class="jedlo__kat">Hlavné jedlo</span><h4>Naše domáce pirohy plnené konfitovaným kačacím mäsom</h4><p>pyré z červenej kapusty, pomarančový gél, bylinkový olej</p><div class="jedlo__spod"><span>350 g</span><span class="cena">18,90 €</span></div></li>
+    <li class="jedlo"><span class="jedlo__kat">Hlavné jedlo</span><h4>Sous vide kačacie prsia</h4><p>pšeničné wok rezance, sezónna zelenina, koriander</p><div class="jedlo__spod"><span>350 g</span><span class="cena">19,90 €</span></div></li>
+    <li class="jedlo"><span class="jedlo__kat">Predjedlo</span><h4>Foie gras (vykŕmená kačacia pečeň)</h4><p>figové chutney, brioška</p><div class="jedlo__spod"><span>120 g</span><span class="cena">11,90 €</span></div></li>
+    <li class="jedlo"><span class="jedlo__kat">Polievka</span><h4>Silný vývar z pečenej kačice</h4><p>julienne zelenina, kačacie knedlíky, ligurček</p><div class="jedlo__spod"><span>0,25 l</span><span class="cena">4,90 €</span></div></li>
+  </ul>
+  <div class="kontajner">
+    <div class="dalej">
+      <div class="dalej__h"><p class="nad">À la carte · október 2026</p><h3>Ďalej na lístku</h3></div>
+      <div class="skup"><h4>Predjedlo a polievka</h4>
+        <p class="polozka polozka--bez"><span class="polozka__n">Carpaccio z pečenej repy</span><span class="cena">7,90 €</span><span class="polozka__p">kozí syr, orechy, bazalkový olej · <span class="nowrap">150 g</span></span></p>
+        <p class="polozka polozka--bez"><span class="polozka__n">Zemiakový krém z hokkaido tekvice</span><span class="cena">5,50 €</span><span class="polozka__p">gaštany, tekvicový olej · <span class="nowrap">0,25 l</span></span></p>
+      </div>
+      <div class="skup"><h4>Hlavné jedlo</h4>
+        <p class="polozka polozka--bez"><span class="polozka__n">Steak z hovädzej sviečkovice</span><span class="cena">32,90 €</span><span class="polozka__p">foie gras, baby špenát, zemiakové pyré, demi-glace omáčka · <span class="nowrap">180/150 g</span></span></p>
+        <p class="polozka polozka--bez"><span class="polozka__n">Grilované kuracie prsia</span><span class="cena">16,50 €</span><span class="polozka__p">gaštany, slanina, zemiaková štrúdľa, velouté omáčka · <span class="nowrap">350 g</span></span></p>
+        <p class="polozka polozka--bez"><span class="polozka__n">Fritovaný rezeň z bravčovej panenky</span><span class="cena">14,90 €</span><span class="polozka__p">zemiakové pyré alebo ryža, miešaný šalát · <span class="nowrap">350 g</span></span></p>
+      </div>
+    </div>
+    <p class="karta__pozn">Výber z lístka, ktorý zverejnili na Facebooku v októbri 2026. Úplný lístok a aktuálne ceny v reštaurácii.</p>
+  </div>
+</section>
+
+<section class="sekcia kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="kontajner mriezka" style="row-gap:40px">
+    <div class="kontakt__text">
+      <p class="nad">Kontakt</p>
+      <h2 id="h-kontakt">Jána Bottu 7, <span class="akc">Topoľčany</span></h2>
+      <p class="perex" style="margin-top:16px">Jedlo na mieste, so sebou aj rozvoz. Stôl si dohodnete telefonicky.</p>
+      <ul class="kanaly">
+        <li><span>Telefón</span><a class="velke" href="tel:+421949000190">0949 000 190</a></li>
+        <li><span>E-mail</span><a href="mailto:pepin.place@gmail.com">pepin.place@gmail.com</a></li>
+        <li><span>Instagram</span><a href="https://www.instagram.com/pepin.place/" rel="noopener" target="_blank">@pepin.place</a></li>
+        <li><span>Facebook</span><a href="https://www.facebook.com/profile.php?id=100094044356500" rel="noopener" target="_blank">Pepin Topoľčany</a></li>
+      </ul>
+      <div class="akcie">
+        <a class="tl tl--hl" href="tel:+421949000190">Zavolať</a>
+        <a class="tl tl--obr" href="https://www.google.com/maps/search/?api=1&amp;query=Pepin%20Place%2C%20J%C3%A1na%20Bottu%207%2C%20Topo%C4%BE%C4%8Dany" rel="noopener" target="_blank">Zistiť cestu</a>
+      </div>
+    </div>
+    <div class="kontakt__foto"><img src="assets/stol-logo.webp" width="660" height="308" loading="lazy" alt="Zlaté logo Pepin v ovále na drevenom stole reštaurácie"></div>
+    <div class="kontakt__hodiny hodiny">
+      <h3>Otváracie hodiny</h3>
+      <ul>
+        <li class="zatv"><span>Pondelok</span><span>zatvorené</span></li>
+        <li class="zatv"><span>Utorok</span><span>zatvorené</span></li>
+        <li><span>Streda</span><span>11:00–21:00</span></li>
+        <li><span>Štvrtok</span><span>11:00–21:00</span></li>
+        <li><span>Piatok</span><span>11:00–22:00</span></li>
+        <li><span>Sobota</span><span>12:00–22:00</span></li>
+        <li class="zatv"><span>Nedeľa</span><span>zatvorené</span></li>
+      </ul>
+      <p>Obedové menu streda až piatok 11:00–14:00. Hodiny podľa profilu na Googli.</p>
+    </div>
   </div>
 </section>
 </main>
 
-<nav class="mbar" aria-label="Rýchle akcie">
-  <a class="btn btn-gold" href="tel:+421949000190">Zavolať</a>
-  <a class="btn btn-line" href="https://www.google.com/maps/search/Pepin+Place+Topo%C4%BE%C4%8Dany" target="_blank" rel="noopener">Zistiť cestu</a>
+<footer class="paticka">
+  <span class="paticka__ovál" aria-hidden="true"></span>
+  <div class="kontajner paticka__in">
+    <img src="assets/pepin-logo.webp" width="284" height="200" alt="Logo Pepin" loading="lazy">
+    <p>Pepin Place · Jána Bottu 7, 955 01 Topoľčany · <a class="cislo" href="tel:+421949000190" style="text-decoration:none">0949 000 190</a></p>
+    <nav aria-label="Pätička"><a href="#obed">Obedové menu</a><a href="#listok">Lístok</a><a href="#kontakt">Kontakt</a></nav>
+    <p>Neoficiálny návrh webu · Darwon · 2026</p>
+  </div>
+</footer>
+
+<nav class="lista" aria-label="Rýchle akcie">
+  <a href="tel:+421949000190"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Zavolať</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Pepin%20Place%2C%20J%C3%A1na%20Bottu%207%2C%20Topo%C4%BE%C4%8Dany" rel="noopener" target="_blank">Cesta</a>
+  <a href="#obed">Menu</a>
 </nav>
+
+<script>
+(function(){
+  "use strict";
+  document.documentElement.classList.add("js");
+  var taby=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function vyber(t){
+    taby.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on?"true":"false");x.tabIndex=on?0:-1;var p=document.getElementById(x.getAttribute("aria-controls"));if(on)p.removeAttribute("hidden");else p.setAttribute("hidden","")});
+  }
+  taby.forEach(function(t,i){
+    t.addEventListener("click",function(){vyber(t)});
+    t.addEventListener("keydown",function(e){var k=e.key==="ArrowRight"||e.key==="ArrowDown"?1:e.key==="ArrowLeft"||e.key==="ArrowUp"?-1:0;if(k){e.preventDefault();var n=taby[(i+k+taby.length)%taby.length];vyber(n);n.focus()}});
+  });
+  if(taby.length)vyber(taby[0]);
+  var pas=document.getElementById("pas");
+  [].forEach.call(document.querySelectorAll("[data-posun]"),function(b){b.addEventListener("click",function(){pas.scrollBy({left:+b.getAttribute("data-posun")*324,behavior:"smooth"})})});
+  var hl=document.getElementById("hlavicka");
+  function skrol(){hl.classList.toggle("je-dole",window.scrollY>40)}
+  window.addEventListener("scroll",skrol,{passive:true});skrol();
+  var panel=document.getElementById("panel"),bg=document.getElementById("burger");
+  function menu(o){panel.classList.toggle("je-otvoreny",o);panel.setAttribute("aria-hidden",o?"false":"true");bg.setAttribute("aria-expanded",o?"true":"false");document.body.style.overflow=o?"hidden":""}
+  bg.addEventListener("click",function(){menu(true)});
+  [].forEach.call(panel.querySelectorAll("[data-zavriet]"),function(el){el.addEventListener("click",function(){menu(false)})});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")menu(false)});
+})();
+</script>
+</body>
 </html>
